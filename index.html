@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>IP Address Tracker</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <h1 class="heading-primary">IP Address Tracker</h1>
+      <section class="search-container" role="search">
+        <form class="search-form" action="#" method="get">
+          <fieldset class="search-field">
+            <legend class="search-title">
+              Search for any IP address or domain
+            </legend>
+            <label for="s">
+              <input
+                class="search-input"
+                type="search"
+                name="s"
+                id="s"
+                placeholder="Search for any IP address or domain"
+                maxlength="200"
+              />
+            </label>
+            <button type="submit" title="Search this website now" class="btn">
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="11"
+                height="14"
+              >
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="3"
+                  d="M2 1l6 6-6 6"
+                />
+              </svg>
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="results-containers">
+        <div class="result-box">
+          <h2 class="heading-secondary">IP Address</h2>
+          <div class="result-text" id="ipAddress">192.255.255.255</div>
+        </div>
+        <div class="result-box">
+          <h2 class="heading-secondary">Location</h2>
+          <div class="result-text" id="location">Brooklyn, NY 10001</div>
+        </div>
+        <div class="result-box">
+          <h2 class="heading-secondary">Timezone</h2>
+          <div class="result-text" id="timezone">UTC -05:00</div>
+        </div>
+        <div class="result-box">
+          <h2 class="heading-secondary">ISP</h2>
+          <div class="result-text" id="isp">SpaceX Starlink</div>
+        </div>
+      </section>
+    </header>
+    <!-- add offset value dynamically using the API -->
+    <main class="map-container">
+      <div class="map"></div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://michal-pawlak.netlify.app/">Michał Pawlak</a>.
+      </div>
+    </main>
+  </body>
 </html>
