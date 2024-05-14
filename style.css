@@ -1,0 +1,162 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 0.625em;
+}
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Rubik", Tahoma, Geneva, Verdana, sans-serif;
+  color: hsl(0, 0%, 17%);
+}
+.container {
+  height: 100vh;
+  background-color: #faff;
+}
+.header {
+  height: 35vh;
+  background-image: url("images/pattern-bg-desktop.png");
+  background-size: cover;
+  text-align: center;
+  padding: 4.8rem 0 0;
+  position: relative;
+}
+.heading-primary {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #fefefe;
+  margin-bottom: 3.2rem;
+}
+.search-container {
+}
+.search-form {
+  display: inline-block;
+}
+.search-field {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-title {
+  display: none;
+}
+.search-input {
+  width: clamp(10rem, 60vw, 50rem);
+  padding: 0 3rem;
+  height: 6rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border: none;
+}
+.btn {
+  border: none;
+  height: 6rem;
+  width: 6rem;
+  background-color: #000;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.results-containers {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  background-color: #fff;
+  font-size: 0.8rem;
+  padding: 4rem clamp(1rem, 2vw, 2rem);
+  border-radius: 1.5rem;
+  width: 80%;
+  height: 18rem;
+  top: 25.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.result-box {
+  padding: 0;
+  text-align: left;
+  width: 20%;
+}
+.result-box:nth-of-type(2),
+.result-box:nth-of-type(3),
+.result-box:nth-of-type(4) {
+  padding-left: clamp(1rem, 2vw, 2rem);
+  border-left: hsla(0, 0%, 59%, 25%) 1px solid;
+}
+.heading-secondary {
+  margin-bottom: 1.6rem;
+  color: hsl(0, 0%, 56%);
+  text-transform: uppercase;
+}
+.result-text {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-weight: 600;
+}
+.map-container {
+  height: 65vh;
+}
+.map {
+  height: calc(100% - 13px);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: hsl(178, 100%, 40%);
+}
+
+@media screen and (max-width: 50em) {
+  .header {
+    padding-top: 1rem;
+    height: 30vh;
+    background-image: url("images/pattern-bg-mobile.png");
+  }
+  .heading-primary {
+    font-size: 3.5rem;
+  }
+  .search-container {
+    margin-bottom: 2rem;
+  }
+  .search-input {
+    width: clamp(4rem, calc(70vw), 44rem);
+    padding: 0 clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  }
+  .results-containers {
+    width: clamp(10rem, calc(70vw + 6rem), 50rem);
+    position: static;
+    margin: 0 auto;
+    transform: none;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+  .result-box {
+    border: none !important;
+    padding-left: 0 !important;
+    text-align: center;
+    width: 100%;
+  }
+  .heading-secondary {
+    margin-bottom: 0.8rem;
+  }
+  .result-text {
+    font-size: 1.8rem;
+  }
+  .map-container {
+    height: 70vh;
+  }
+}
