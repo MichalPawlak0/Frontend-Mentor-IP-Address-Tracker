@@ -9,6 +9,18 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <link
       rel="icon"
       type="image/png"
@@ -16,6 +28,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>IP Address Tracker</title>
   </head>
   <body class="container">
@@ -76,7 +89,7 @@
     </header>
     <!-- add offset value dynamically using the API -->
     <main class="map-container">
-      <div class="map"></div>
+      <div class="map" id="map"></div>
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
