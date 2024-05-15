@@ -102,6 +102,7 @@ body {
 }
 .map {
   height: calc(100% - 13px);
+  z-index: -1;
 }
 .attribution {
   font-size: 11px;
