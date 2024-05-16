@@ -9,7 +9,7 @@ let map = L.map('map');
 
 function makeIpifyAjaxCall(){
   searchInputValue = getSearchInputValue();
-  fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_rfoXPS0FFNi2Mrp6RBUTDxD8ixfxq&ipAddress=${searchInputValue}`)
+  fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_rfoXPS0FFNi2Mrp6RBUTDxD8ixfxq&ipAddress=${searchInputValue}&domain=${searchInputValue}`)
     .then(res => {
       return res.json();
     })
@@ -38,7 +38,6 @@ function updateMap(lat,lng){
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 L.marker([lat, lng]).addTo(map);
-
 }
 
 btnEl.addEventListener('click',()=>{
