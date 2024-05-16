@@ -15,7 +15,7 @@ body {
 }
 .container {
   height: 100vh;
-  background-color: #faff;
+  background-color: #fff;
 }
 .header {
   height: 35vh;
@@ -30,8 +30,6 @@ body {
   font-weight: 500;
   color: #fefefe;
   margin-bottom: 3.2rem;
-}
-.search-container {
 }
 .search-form {
   display: inline-block;
@@ -62,6 +60,7 @@ body {
   background-color: #000;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
+  cursor: pointer;
 }
 .results-containers {
   display: flex;
@@ -76,6 +75,7 @@ body {
   top: 25.5rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 .result-box {
   padding: 0;
@@ -102,7 +102,7 @@ body {
 }
 .map {
   height: calc(100% - 13px);
-  z-index: -1;
+  z-index: 1;
 }
 .attribution {
   font-size: 11px;
@@ -112,6 +112,7 @@ body {
   color: hsl(228, 45%, 44%);
   transition: color 0.2s ease;
   text-decoration: none;
+  font-weight: 500;
 }
 .attribution a:hover {
   color: hsl(178, 100%, 40%);
@@ -122,6 +123,7 @@ body {
     padding-top: 1rem;
     height: 30vh;
     background-image: url("images/pattern-bg-mobile.png");
+    z-index: 2;
   }
   .heading-primary {
     font-size: 3.5rem;

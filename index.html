@@ -50,7 +50,7 @@
                 maxlength="200"
               />
             </label>
-            <button type="submit" title="Search this website now" class="btn">
+            <button type="button" title="Search this website now" class="btn">
               <svg
                 class="icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,23 +71,22 @@
       <section class="results-containers">
         <div class="result-box">
           <h2 class="heading-secondary">IP Address</h2>
-          <div class="result-text" id="ipAddress">192.255.255.255</div>
+          <div class="result-text" id="ipAddress">--</div>
         </div>
         <div class="result-box">
           <h2 class="heading-secondary">Location</h2>
-          <div class="result-text" id="location">Brooklyn, NY 10001</div>
+          <div class="result-text" id="location">--</div>
         </div>
         <div class="result-box">
           <h2 class="heading-secondary">Timezone</h2>
-          <div class="result-text" id="timezone">UTC -05:00</div>
+          <div class="result-text" id="timezone">--</div>
         </div>
         <div class="result-box">
           <h2 class="heading-secondary">ISP</h2>
-          <div class="result-text" id="isp">SpaceX Starlink</div>
+          <div class="result-text" id="isp">--</div>
         </div>
       </section>
     </header>
-    <!-- add offset value dynamically using the API -->
     <main class="map-container">
       <div class="map" id="map"></div>
       <div class="attribution">
