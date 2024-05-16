@@ -61,6 +61,14 @@ body {
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.btn:hover {
+  background-color: rgb(40, 40, 40);
+}
+.btn:active {
+  box-shadow: rgb(0, 0, 0) 0 0 10px 0px inset;
+  scale: 0.95;
 }
 .results-containers {
   display: flex;
